@@ -16,4 +16,4 @@ def concat(str1: str, str2: str) -> str:
     Return:
     value (string) - concatenated string od @str1 and @str2
     """
-    "{}{}".format(str1, str2)
+    return "{}{}".format(str1, str2)
