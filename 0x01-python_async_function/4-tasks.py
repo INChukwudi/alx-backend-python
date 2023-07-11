@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
 
 """
-File imports wait_random and defines an async function that calls wait_random
-for n times.
+File contains the task_wait_n coroutine
 """
 
 from typing import List
-wait_random = __import__('0-basic_async_syntax').wait_random
+task_wait_random = __import__('3-tasks').task_wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> List[float]:
+async def task_wait_n(n: int, max_delay: int) -> List[float]:
     """
-    Async function that spawns wait_random n times with a delay of max_delay
+    Async function that spawns task_wait_random n times with a
+    max_delay of max_delay
     """
 
     delay_list = []
     for i in range(n):
-        delay = await wait_random(max_delay)
+        delay = await task_wait_random(max_delay)
         delay_list.append(delay)
 
     ret_list = []
